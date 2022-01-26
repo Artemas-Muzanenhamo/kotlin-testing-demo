@@ -9,7 +9,7 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
-@WebMvcTest
+@WebMvcTest(PersonEndpoint::class)
 @DisplayName("Unit Testing the Person API")
 class PersonEndpointShould {
     @Autowired
@@ -26,6 +26,6 @@ class PersonEndpointShould {
                     "surname": "james"
                 }
             """.trimIndent()))
-            .andExpect(status().is2xxSuccessful)
+            .andExpect(status().isCreated)
     }
 }
