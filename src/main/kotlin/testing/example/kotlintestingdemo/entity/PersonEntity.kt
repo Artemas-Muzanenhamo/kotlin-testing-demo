@@ -1,11 +1,15 @@
-package testing.example.kotlintestingdemo.domain
+package testing.example.kotlintestingdemo.entity
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
 import javax.persistence.Table
 
-data class Person(
+@Entity
+@Table(name = "person")
+class PersonEntity(
+    @Id
+    @GeneratedValue
     val id: Long? = null,
     val name: String? = null,
     val surname: String? = null
