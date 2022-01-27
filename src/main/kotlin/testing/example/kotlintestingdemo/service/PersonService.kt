@@ -21,4 +21,16 @@ class PersonService(
         )
     }
 
+    fun retrievePersonByName(name: String): Person {
+        return personRepository.findFirstByName(name).toDomain() ?: throw Exception("Person does not exist")
+    }
+    
+    fun PersonEntity.toDomain(): Person? {
+        return Person(
+            id = this.id,
+            name = this.name,
+            surname = this.surname
+        )
+    }
+
 }

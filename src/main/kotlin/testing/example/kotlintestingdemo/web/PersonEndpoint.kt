@@ -2,6 +2,8 @@ package testing.example.kotlintestingdemo.web
 
 import org.springframework.http.HttpStatus.CREATED
 import org.springframework.http.MediaType.APPLICATION_JSON_VALUE
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -20,5 +22,10 @@ class PersonEndpoint(
     @ResponseStatus(CREATED)
     fun createAPerson(@RequestBody person: Person) {
         personService.create(person)
+    }
+    
+    @GetMapping("/people/{name}", produces = [APPLICATION_JSON_VALUE])
+    fun getPersonByName(@PathVariable name: String): Person {
+        return personService.retrievePersonByName(name)
     }
 }
