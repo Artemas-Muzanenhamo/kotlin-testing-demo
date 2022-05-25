@@ -2,7 +2,6 @@ package testing.example.kotlintestingdemo
 
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
-import testing.example.kotlintestingdemo.domain.Person
 import testing.example.kotlintestingdemo.entity.PersonEntity
 import testing.example.kotlintestingdemo.repository.PersonRepository
 
