@@ -1,6 +1,5 @@
-package integration.test
+package com.example.person
 
-import com.example.person.PersonServiceApplication
 import io.restassured.RestAssured.given
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
