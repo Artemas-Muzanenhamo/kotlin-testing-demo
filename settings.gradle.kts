@@ -1,2 +1,2 @@
 rootProject.name = "kotlin-testing-demo"
-include("kotlin-test-by-packages")
+include("kotlin-tests-by-packages")
