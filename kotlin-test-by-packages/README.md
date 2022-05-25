@@ -1,4 +1,5 @@
-# Testing Spring Boot Kotlin
+# Kotlin Tests By Packages
+This project shows you how to separate tests using packages with Gradle.
 
 - To execute all tests you run `./gradlew clean check`
 - To execute all unit tests you run `./gradle clean test`
